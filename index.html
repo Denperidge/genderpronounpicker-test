@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+<script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+<link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <label>
+        <input type="checkbox">He/Him
+    </label>
+    <label>
+        <input type="checkbox">She/Her
+    </label>
+    <label>
+        <input type="checkbox">They/Them
+    </label>
+    <input type="text" placeholder="Insert other pronouns here!">
+
+    <hr>
+
+    <label>Pronouns:
+        <input class="pronouns">
+    </label>
+
+    <hr><hr>
+
+    <label>Remind me to change them...</label>
+    <button>Tomorrow</button>
+    <button>Next week</button>
+    <button>2 weeks</button>
+
+    <hr>
+    
+    <label>Remind me to change them in ...</label>
+    <input type="number"> days
+
+    <hr>
+
+    <label>Remind me to change them...</label>
+    <select>
+        <option>Tomorrow</option>
+        <option>Next week</option>
+        <option>In 2 weeks</option>
+
+    </select>
+
+    <script>
+        var tagify = new Tagify(
+            document.getElementsByClassName("pronouns")[0], {
+
+            whitelist: ["He/Him", "She/Her", "They/Them"]
+        });
+
+        </script>
+
+</body>
+</html>
